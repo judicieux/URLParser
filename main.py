@@ -12,7 +12,7 @@ class bing_parser():
         self.pages = pages
 
     def search(self):
-        blocked = re.compile(r"\bmicrosoft\b | \bbing\b | \bwikipedia\b", flags=re.I | re.X)
+        blocked = re.compile(r"\bmicrosoft|bing|wikipedia\b", flags=re.I | re.X)
         with open(self.file, "r") as file:
             content = file.readlines()
         content = [a.strip() for a in content] 
